@@ -17,12 +17,14 @@
   <body>
     <div class="container">
       <div class="form-container">
-        <form class="login-form" action="#">
+        <form class="login-form" action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
           <label class="label-text">Email</label>
-          <input placeholder="examlpe@gmail.com" type="text" />
+          <input name ="email" placeholder="examlpe@gmail.com" type="text" />
           <label class="label-text">Password</label>
-          <input type="password" />
-          <a class="btn" href="#"><span class="btn-text">Sign in</span></a>
+          <input name="password" type="password" />
+          <button class="btn" type="submit"><span class="btn-text">Sign in</span></button>
+<!--          <input class="btn" type="submit" value="Sign In">-->
           <a class="add-inf" href="#"
             ><span class="add-inf-text"> Forgot password?</span></a
           >
