@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'styles/login_style.css' %}" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form class="login-form" action="#">
+          <label class="label-text">Email</label>
+          <input placeholder="examlpe@gmail.com" type="text" />
+          <label class="label-text">Password</label>
+          <input type="password" />
+          <a class="btn" href="#"><span class="btn-text">Sign in</span></a>
+          <a class="add-inf" href="#"
+            ><span class="add-inf-text"> Forgot password?</span></a
+          >
+          <a class="add-inf" href="#"
+            ><span class="add-inf-text">Don't have account?</span></a
+          >
+        </form>
+        <div class="icon-block">
+          <a class="icon" href="#">
+            <img class="icon-img" src="{% static 'images/free-icon-google-symbol-2875404.png' %}" />
+          </a>
+          <a class="icon" href="#">
+            <img class="icon-img" src="{% static 'images/free-icon-facebook-145802.png' %}" />
+          </a>
+          <a class="icon" href="#"
+            ><img class="icon-img" src="{% static 'images/free-icon-steam-3670382.png' %}"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

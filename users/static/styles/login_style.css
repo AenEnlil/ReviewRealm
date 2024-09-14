@@ -1,0 +1,94 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+}
+
+body {
+  background-color: #7ed6df;
+  color: #222;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60rem;
+  height: 70rem;
+  margin: auto;
+}
+
+.form-container {
+  background-color: #58969c;
+  border: 3px solid #4c8086;
+  border-radius: 15px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 34rem;
+
+  padding: 6rem 2rem 0rem 2rem;
+}
+
+.label-text {
+  font-size: 1.6rem;
+}
+
+input {
+  width: 22rem;
+  height: 4rem;
+  font-size: 1.8rem;
+}
+
+.btn {
+  /* width: 15rem; */
+  padding: 1.5rem 5.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #7ed6df;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #71c1c9;
+}
+
+.btn-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.icon-block {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+.icon-img {
+  width: 4.8rem;
+  margin-bottom: 2rem;
+}
+
+.add-inf {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #c7ecee;
+}
+.add-inf:link,
+.add-inf:active,
+.add-inf:hover {
+  color: #fff;
+}
