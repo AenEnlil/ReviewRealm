@@ -8,13 +8,13 @@ from .forms import LoginForm
 
 class LoginView(FormView):
 
-    template_name = 'form.html'
+    template_name = 'login_form.html'
     form_class = LoginForm
     success_url = reverse_lazy('index')
 
     def form_invalid(self, form, user_not_authenticated=False):
         if user_not_authenticated:
-            form.add_error(None, 'Invalid email or password')
+            form.add_error('email', 'Invalid email or password')
         return super().form_invalid(form)
 
     def form_valid(self, form):

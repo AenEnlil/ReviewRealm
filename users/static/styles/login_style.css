@@ -92,3 +92,8 @@ input {
 .add-inf:hover {
   color: #fff;
 }
+
+.errorlist {
+    color: red;
+    font-size: 1.4rem;
+}
