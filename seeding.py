@@ -1,5 +1,5 @@
-from django.conf import settings
 from django.db import connection
+from django.contrib.auth.hashers import make_password
 import os
 from dotenv import load_dotenv
 from django import setup
@@ -12,12 +12,12 @@ data = {
     'User': [
         {
             'email': 'gredg32@gmail.com',
-            'password': 'Gtse32t5',
+            'password': make_password('Gtse32t5'),
             'is_superuser': True
         },
         {
             'email': 'Hgr2@gmail.com',
-            'password': 'Hhb43f'
+            'password': make_password('Hhb43f')
         }
     ]
 }
