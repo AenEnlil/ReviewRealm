@@ -64,9 +64,12 @@ def seed_models(model_list):
         save_objects(object_list, model, model_name)
 
 
+print('Start Seeding')
+
 models = get_custom_models()
 seed_models(models)
 
+print('Seeding Ended')
 
 
 
