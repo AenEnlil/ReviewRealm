@@ -1,9 +1,23 @@
 from django.contrib.auth import authenticate, login
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from django.views import View
-from django.views.generic import FormView, TemplateView
-from .forms import LoginForm
+from django.views.generic import FormView, TemplateView, CreateView
+from .forms import RegistrationForm, LoginForm
+from .models import User
+
+
+class RegistrationView(CreateView):
+    model = User
+    form_class = RegistrationForm
+    template_name = 'registration_form.html'
+    instance = None
+    success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        self.object = form.save()
+        new_user = authenticate(email=form.cleaned_data['email'], password=form.cleaned_data['password'])
+        login(self.request, new_user)
+        return HttpResponseRedirect(self.get_success_url())
 
 
 class LoginView(FormView):
